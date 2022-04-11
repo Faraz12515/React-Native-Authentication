@@ -28,17 +28,17 @@ const SignInScreen = () => {
 
     // onSignInFacebook 
     const onSignInFacebook = () => {
-
+        console.warn("Sign In with Facebook")
     }
 
     // onSignInGoogle 
     const onSignInGoogle = () => {
-
+        console.warn("Sign In with Google")
     }
 
     //onSignInApple
     const onSignInApple = () => {
-
+        console.warn("Sign In with Apple")
     }
 
     return (
