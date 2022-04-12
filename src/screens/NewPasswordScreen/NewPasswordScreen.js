@@ -2,11 +2,16 @@ import React, { useState } from 'react'
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import CustomButton from '../../components/CustomButton/CustomButton';
 import CustomInput from '../../components/CustomInput';
+import { useNavigation } from '@react-navigation/native'
+
 
 
 const NewPasswordScreen = () => {
     const [code, setCode] = useState("")
     const [newPassword, setNewPassword] = useState("")
+
+    // navigation //
+    const navigation = useNavigation()
 
     // Submit //
     const onSubmit = () => {
@@ -15,7 +20,7 @@ const NewPasswordScreen = () => {
 
     // Sign In //
     const onSignIn = () => {
-        console.warn("Sign In")
+        navigation.navigate("SignIn")
     }
 
 

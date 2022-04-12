@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import CustomButton from '../../components/CustomButton/CustomButton';
 import CustomInput from '../../components/CustomInput';
 import SocialSignInButtons from '../../components/SocialSignInButtons'
+import { useNavigation } from '@react-navigation/native'
 
 
 const SignUpScreen = () => {
@@ -11,13 +12,18 @@ const SignUpScreen = () => {
     const [password, setPassword] = useState("")
     const [passwordRepeat, setPasswordRepeat] = useState("")
 
+
+    // navigation //
+    const navigation = useNavigation()
+
+
     // Register //
     const onRegister = () => {
-        console.warn("Register")
+        navigation.navigate("ConfirmEmail")
     }
     // Sign In //
     const onSignIn = () => {
-        console.warn("Sign In")
+        navigation.navigate("SignIn")
     }
 
 

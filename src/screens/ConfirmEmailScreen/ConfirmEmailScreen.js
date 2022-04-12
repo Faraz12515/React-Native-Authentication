@@ -2,22 +2,25 @@ import React, { useState } from 'react'
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import CustomButton from '../../components/CustomButton/CustomButton';
 import CustomInput from '../../components/CustomInput';
+import { useNavigation } from '@react-navigation/native'
 
 
 const SignUpScreen = () => {
     const [code, setCode] = useState("")
 
+    // navigation //
+    const navigation = useNavigation()
+
     // Cofirm //
     const onConfirm = () => {
-        console.warn("Cofirm")
+        navigation.navigate("Home")
     }
     // Resend Code //
     const onResendCode = () => {
-        console.warn("Resend Code")
     }
     // Sign In //
     const onSignIn = () => {
-        console.warn("Sign In")
+        navigation.navigate("SignIn")
     }
 
 

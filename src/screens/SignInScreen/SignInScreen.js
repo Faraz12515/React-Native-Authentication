@@ -4,6 +4,7 @@ import Logo from '../../../assets/images/Epic_Games_logo.png';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import CustomInput from '../../components/CustomInput';
 import SocialSignInButtons from '../../components/SocialSignInButtons'
+import { useNavigation } from '@react-navigation/native'
 
 
 const SignInScreen = () => {
@@ -12,19 +13,22 @@ const SignInScreen = () => {
 
     const { height } = useWindowDimensions();
 
+    // navigation //
+    const navigation = useNavigation()
+
     // SignIn //
     const onSignIn = () => {
-        console.warn("Sign In")
+        navigation.navigate("Home")
     }
 
     // SignUp //
     const onSignUp = () => {
-        console.warn("Sign Up")
+        navigation.navigate("SignUp")
     }
 
     // ForgotPassword //
     const onForgotPassword = () => {
-        console.warn("Forgot Password")
+        navigation.navigate("ForgotPassword")
     }
 
     return (
